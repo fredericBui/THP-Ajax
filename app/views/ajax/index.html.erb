@@ -1,0 +1,8 @@
+<%# When add .js to the root it work but render trigger.js %>
+<%= form_tag("/ajax/trigger", remote: true) do %>
+   <%= submit_tag 'Trigger form tag'%>
+<% end %>
+
+<%= form_with(url: "/ajax/trigger.js", local: false) do |form| %>
+   <%= form.submit "Trigger form with" %>
+<% end %>
